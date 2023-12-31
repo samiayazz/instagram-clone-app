@@ -1,16 +1,19 @@
 ﻿# Instagram Clone
 
-> [!Note]
-> Geliştirilme aşamasında. <br>
-> Under development.
+<br>
 
 ## Dil Seçimi / Language Selection
 
 [Türkçe](#türkçe) / [English](#english)
 
----
+<br>
 
 ## Türkçe
+
+> [!Note]
+> Geliştirilme aşamasında.
+
+<br>
 
 Bu proje, .NET Core kullanılarak geliştirilen bir Instagram klonu uygulamasıdır. <br>
 Uygulama, çeşitli modern teknolojileri kullanarak geliştirilmiş ve **Clean Architecture, TDD (Test Driven Development) ve CQRS prensiplerine dayalı olarak yapılandırılmıştır**. <br>
@@ -48,7 +51,14 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 5. Proje klasöründe terminali açın ve bağımlılıkları yüklemek için `dotnet restore` komutunu çalıştırın.
 6. Uygulamayı başlatmak için `dotnet run` komutunu kullanın.
 
+<br>
+
 ## English
+
+> [!Note]
+> Under development.
+
+<br>
 
 This project is an Instagram clone application developed using .NET Core. <br>
 The application is structured based on various modern technologies and **follows the principles of Clean Architecture, TDD (Test Driven Development) and CQRS**. <br>
