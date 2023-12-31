@@ -1,7 +1,7 @@
 ﻿# Instagram Clone
 
 > [!Note]
-> Geliştirilme aşamasında.
+> Geliştirilme aşamasında. <br>
 > Under development.
 
 ## Dil Seçimi / Language Selection
@@ -48,8 +48,6 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 4. `appsettings.json` dosyasında gerekli ayarlamaları yapın.
 5. Proje klasöründe terminali açın ve bağımlılıkları yüklemek için `dotnet restore` komutunu çalıştırın.
 6. Uygulamayı başlatmak için `dotnet run` komutunu kullanın.
-
----
 
 ## English
 
