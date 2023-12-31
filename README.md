@@ -13,8 +13,7 @@
 ## Türkçe
 
 Bu proje, .NET Core kullanılarak geliştirilen bir Instagram klonu uygulamasıdır. <br>
-Uygulama, çeşitli modern teknolojileri kullanarak geliştirilmiş ve Clean Architecture ve TDD (Test Driven Development)
-prensiplerine dayalı olarak yapılandırılmıştır. <br>
+Uygulama, çeşitli modern teknolojileri kullanarak geliştirilmiş ve Clean Architecture, TDD (Test Driven Development) ve CQRS prensiplerine dayalı olarak yapılandırılmıştır. <br>
 
 Aşağıda uygulamada kullanılan teknolojiler ve mimari yaklaşımlarının özeti bulunmaktadır.
 
@@ -52,8 +51,7 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 ## English
 
 This project is an Instagram clone application developed using .NET Core. <br>
-The application is structured based on various modern technologies and follows the principles of Clean Architecture and
-TDD (Test Driven Development). <br>
+The application is structured based on various modern technologies and follows the principles of Clean Architecture, TDD (Test Driven Development) and CQRS. <br>
 
 Below is a summary of the technologies and architectural approaches used in the application.
 
