@@ -22,4 +22,12 @@
       <ProjectReference Include="..\..\Core\InstagramClone.Domain\InstagramClone.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Configurations\Comment\" />
+      <Folder Include="Configurations\Common\" />
+      <Folder Include="Configurations\Identity\" />
+      <Folder Include="Configurations\Message\" />
+      <Folder Include="Configurations\Post\" />
+    </ItemGroup>
+
 </Project>

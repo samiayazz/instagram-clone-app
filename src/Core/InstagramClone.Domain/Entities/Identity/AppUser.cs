@@ -20,6 +20,23 @@ namespace InstagramClone.Domain.Entities.Identity
         public new string Email { get; set; }
         public new string PasswordHash { get; set; }
 
+        public string About { get; set; }
+
+
+        private string? _thought;
+
+        public string? Thought
+        {
+            get => _thought;
+            set
+            {
+                _thought = value;
+                ThoughtDate = DateTime.UtcNow;
+            }
+        }
+
+        public DateTime? ThoughtDate { get; protected set; }
+
         public Guid RoleId { get; set; }
         public virtual AppRole Role { get; set; } = default!;
 

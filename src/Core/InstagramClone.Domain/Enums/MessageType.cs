@@ -1,10 +1,11 @@
 ﻿namespace InstagramClone.Domain.Enums
 {
-    public enum PostType
+    public enum MessageType
     {
         Video,
         Image,
         Sound,
-        Text
+        Text,
+        Emoji
     }
 }

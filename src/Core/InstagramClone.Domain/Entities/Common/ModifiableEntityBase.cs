@@ -2,9 +2,9 @@
 
 namespace InstagramClone.Domain.Entities.Common
 {
-    public abstract class ModifiableEntity : Entity
+    public abstract class ModifiableEntityBase : EntityBase
     {
-        protected ModifiableEntity(Guid id, Guid createdById) : base(id)
+        protected ModifiableEntityBase(Guid id, Guid createdById) : base(id)
             => CreatedById = createdById;
 
         public Guid CreatedById { get; init; }

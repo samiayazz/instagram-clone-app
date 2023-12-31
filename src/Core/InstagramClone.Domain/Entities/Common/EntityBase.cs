@@ -2,9 +2,9 @@
 
 namespace InstagramClone.Domain.Entities.Common
 {
-    public abstract class Entity : IEntity
+    public abstract class EntityBase : IEntity
     {
-        protected Entity(Guid id)
+        protected EntityBase(Guid id)
             => Id = id;
 
         public Guid Id { get; init; }
