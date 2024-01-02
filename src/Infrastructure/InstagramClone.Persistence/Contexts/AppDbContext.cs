@@ -78,6 +78,11 @@ namespace InstagramClone.Persistence.Contexts
                         entry.Property(x => x.RemovedById).CurrentValue = userId;
                         entry.Property(x => x.RemovedDate).CurrentValue = DateTime.UtcNow;
                     }
+                    else
+                    {
+                        entry.Property(x => x.RemovedById).CurrentValue = null;
+                        entry.Property(x => x.RemovedDate).CurrentValue = null;
+                    }
 
                     entry.Property(x => x.UpdatedById).CurrentValue = userId;
                     entry.Property(x => x.UpdatedDate).CurrentValue = DateTime.UtcNow;
@@ -94,6 +99,8 @@ namespace InstagramClone.Persistence.Contexts
                 {
                     if (entry.Property(x => x.IsRemoved).CurrentValue)
                         entry.Property(x => x.RemovedDate).CurrentValue = DateTime.UtcNow;
+                    else
+                        entry.Property(x => x.RemovedDate).CurrentValue = null;
 
                     entry.Property(x => x.UpdatedDate).CurrentValue = DateTime.UtcNow;
                 }
