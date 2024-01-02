@@ -5,6 +5,9 @@ namespace InstagramClone.Domain.Entities.Content
 {
     public class CommentReply : EntityBase
     {
+        public CommentReply(Guid repliedCommentId, Guid recipientId, Guid commentId)
+            => (RepliedCommentId, RecipientId, CommentId) = (repliedCommentId, recipientId, commentId);
+
         public CommentReply(Guid id, Guid repliedCommentId, Guid recipientId, Guid commentId) : base(id)
             => (RepliedCommentId, RecipientId, CommentId) = (repliedCommentId, recipientId, commentId);
 

@@ -1,10 +1,11 @@
 ﻿using InstagramClone.Domain.Entities.Identity;
 using InstagramClone.Persistence.Contexts;
+using InstagramClone.Persistence.Utils.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InstagramClone.Persistence.Extensions.WebAppConfig
+namespace InstagramClone.Persistence.Extensions.AspNetCore
 {
     public static class PersistenceWebAppConfigExtension
     {
@@ -15,6 +16,8 @@ namespace InstagramClone.Persistence.Extensions.WebAppConfig
 
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
+
+            services.AddScoped<HttpContextUtils>();
 
             return services;
         }

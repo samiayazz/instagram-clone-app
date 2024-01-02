@@ -69,6 +69,10 @@ namespace InstagramClone.Persistence.Configurations.Identity
                 .IsRequired(false);
             builder.Property(x => x.RemovedDate)
                 .IsRequired(false);
+            // IsRemoved
+            builder.Property(x => x.IsRemoved)
+                .HasDefaultValue(false)
+                .IsRequired();
         }
     }
 }

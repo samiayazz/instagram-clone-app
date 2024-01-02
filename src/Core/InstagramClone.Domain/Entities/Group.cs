@@ -6,7 +6,10 @@ namespace InstagramClone.Domain.Entities
 {
     public class Group : ModifiableEntityBase
     {
-        public Group(Guid id, Guid createdById, string name, string about) : base(id, createdById)
+        public Group(string name, string about)
+            => (Name, About) = (name, about);
+
+        public Group(Guid id, string name, string about) : base(id)
             => (Name, About) = (name, about);
 
         public string Name { get; set; }

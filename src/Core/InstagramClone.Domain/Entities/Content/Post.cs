@@ -6,9 +6,10 @@ namespace InstagramClone.Domain.Entities.Content
 {
     public class Post : ModifiableEntityBase
     {
-        private Post(Guid id, Guid createdById,
-            PostType type, PostContentType contentType, string description)
-            : base(id, createdById)
+        private Post(PostType type, PostContentType contentType, string description)
+            => (ContentType, Type, Description) = (contentType, type, description);
+
+        private Post(Guid id, PostType type, PostContentType contentType, string description) : base(id)
             => (ContentType, Type, Description) = (contentType, type, description);
 
         public PostType Type { get; private init; }
@@ -23,30 +24,27 @@ namespace InstagramClone.Domain.Entities.Content
 
         public virtual IEnumerable<AppUser> LikedUsers { get; private set; } = default!;
 
-        public static Post CreateVideoPost(Guid id, Guid createdById, PostType type,
-            string description, string videoPath)
-            => new(id, createdById, type, PostContentType.Video, description)
+        public static Post CreateVideoPost(PostType type, string description, string videoPath)
+            => new(type, PostContentType.Video, description)
             {
                 VideoPath = videoPath,
             };
 
-        public static Post CreateImagePost(Guid id, Guid createdById, PostType type,
-            string description, string imagePath, string? soundPath = null)
-            => new(id, createdById, type, PostContentType.Image, description)
+        public static Post CreateImagePost(PostType type, string description, string imagePath,
+            string? soundPath = null)
+            => new(type, PostContentType.Image, description)
             {
                 ImagePath = imagePath,
                 SoundPath = soundPath
             };
 
-        public static Post CreateSoundPost(Guid id, Guid createdById, PostType type,
-            string description, string soundPath)
-            => new(id, createdById, type, PostContentType.Sound, description)
+        public static Post CreateSoundPost(PostType type, string description, string soundPath)
+            => new(type, PostContentType.Sound, description)
             {
                 SoundPath = soundPath,
             };
 
-        public static Post CreateTextPost(Guid id, Guid createdById, PostType type,
-            string description)
-            => new(id, createdById, type, PostContentType.Text, description);
+        public static Post CreateTextPost(PostType type, string description)
+            => new(type, PostContentType.Text, description);
     }
 }

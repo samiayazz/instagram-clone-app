@@ -33,6 +33,9 @@ namespace InstagramClone.Persistence.Configurations.Common
                 .HasForeignKey(x => x.RemovedById);
             builder.Property(x => x.RemovedDate)
                 .IsRequired(false);
+            builder.Property(x => x.IsRemoved)
+                .HasDefaultValue(false)
+                .IsRequired();
         }
     }
 }

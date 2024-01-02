@@ -4,7 +4,11 @@ namespace InstagramClone.Domain.Entities
 {
     public class Thought : ModifiableEntityBase
     {
-        public Thought(Guid id, Guid createdById, string text) : base(id, createdById)
+        public Thought(string text)
+            => Text = text;
+
+
+        public Thought(Guid id, string text) : base(id)
             => Text = text;
 
         public string Text { get; set; }

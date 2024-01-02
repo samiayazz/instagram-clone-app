@@ -5,8 +5,10 @@ namespace InstagramClone.Domain.Entities.Content
 {
     public class Comment : ModifiableEntityBase
     {
-        public Comment(Guid id, Guid createdById, Guid postId, string text, bool isReply = false)
-            : base(id, createdById)
+        public Comment(Guid postId, string text, bool isReply = false)
+            => (PostId, Text, IsReply) = (postId, text, isReply);
+
+        public Comment(Guid id, Guid postId, string text, bool isReply = false) : base(id)
             => (PostId, Text, IsReply) = (postId, text, isReply);
 
         public bool IsReply { get; private init; }

@@ -1,4 +1,4 @@
-using InstagramClone.Persistence.Extensions.WebAppConfig;
+using InstagramClone.Persistence.Extensions.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

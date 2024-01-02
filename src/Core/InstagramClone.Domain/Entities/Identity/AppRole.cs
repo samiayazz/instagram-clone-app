@@ -5,9 +5,12 @@ namespace InstagramClone.Domain.Entities.Identity
 {
     public class AppRole : IdentityRole<Guid>, IEntity
     {
+        public AppRole(string name)
+            => base.Name = name;
+
         public AppRole(Guid id, string name)
             => (Id, base.Name) = (id, name);
 
-        public new Guid Id { get; init; }
+        public new Guid Id { get; private init; } = Guid.NewGuid();
     }
 }
