@@ -87,7 +87,7 @@ namespace InstagramClone.Domain.Entities.Chat
             _ => throw new Exception("MessageType: 'Direct' ya da 'Group' olarak belirlenmelidir.")
         };
 
-        public static Message CreateTextMessage(MessageType type, string? text = null,
+        public static Message CreateTextMessage(MessageType type, string text,
             bool isReply = false) => type switch
         {
             MessageType.Direct => new(type, MessageContentType.Text, isReply)
@@ -104,7 +104,7 @@ namespace InstagramClone.Domain.Entities.Chat
             _ => throw new Exception("MessageType: 'Direct' ya da 'Group' olarak belirlenmelidir.")
         };
 
-        public static Message CreateEmojiMessage(MessageType type, string? emoji = null,
+        public static Message CreateEmojiMessage(MessageType type, string emoji,
             bool isReply = false) => type switch
         {
             MessageType.Direct => new(type, MessageContentType.Emoji, isReply)
