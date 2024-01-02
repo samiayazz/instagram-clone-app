@@ -16,11 +16,6 @@ namespace InstagramClone.Persistence.Configurations.Chat
                 .WithMany()
                 .HasForeignKey(r => r.RepliedMessageId);
 
-            // Recipient
-            builder.HasOne(r => r.Recipient)
-                .WithMany()
-                .HasForeignKey(r => r.RecipientId);
-
             // Message
             builder.HasOne(r => r.Message)
                 .WithMany()

@@ -5,17 +5,14 @@ namespace InstagramClone.Domain.Entities.Chat
 {
     public class MessageReply : EntityBase
     {
-        public MessageReply(Guid repliedMessageId, Guid recipientId, Guid messageId)
-            => (RepliedMessageId, RecipientId, MessageId) = (repliedMessageId, recipientId, messageId);
+        public MessageReply(Guid repliedMessageId, Guid messageId)
+            => (RepliedMessageId, MessageId) = (repliedMessageId, messageId);
 
-        public MessageReply(Guid id, Guid repliedMessageId, Guid recipientId, Guid messageId) : base(id)
-            => (RepliedMessageId, RecipientId, MessageId) = (repliedMessageId, recipientId, messageId);
+        public MessageReply(Guid id, Guid repliedMessageId, Guid messageId) : base(id)
+            => (RepliedMessageId, MessageId) = (repliedMessageId, messageId);
 
         public Guid RepliedMessageId { get; private init; }
         public virtual Message RepliedMessage { get; private set; } = default!;
-
-        public Guid RecipientId { get; private init; }
-        public virtual AppUser Recipient { get; private set; } = default!;
 
         public Guid MessageId { get; private init; }
         public virtual Message Message { get; private set; } = default!;
