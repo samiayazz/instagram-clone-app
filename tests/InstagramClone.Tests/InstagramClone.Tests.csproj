@@ -26,4 +26,11 @@
       <ProjectReference Include="..\..\src\Infrastructure\InstagramClone.Persistence\InstagramClone.Persistence.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="UnitTests\Core\ApplicationTests\" />
+      <Folder Include="UnitTests\Infrastructure\InfrastructureTests\" />
+      <Folder Include="UnitTests\Infrastructure\PersistenceTests\" />
+      <Folder Include="UnitTests\Presentation\APITests\" />
+    </ItemGroup>
+
 </Project>
