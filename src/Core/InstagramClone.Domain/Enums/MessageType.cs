@@ -2,6 +2,12 @@
 {
     public enum MessageType
     {
+        Direct,
+        Group
+    }
+
+    public enum MessageContentType
+    {
         Video,
         Image,
         Sound,

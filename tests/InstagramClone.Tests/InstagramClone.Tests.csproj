@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Infrastructure\InstagramClone.Persistence\InstagramClone.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>
