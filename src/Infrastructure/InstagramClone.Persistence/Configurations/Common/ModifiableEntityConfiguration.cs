@@ -1,11 +1,11 @@
-﻿using InstagramClone.Domain.Entities.Common.Base;
+﻿using InstagramClone.Domain.Interfaces.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace InstagramClone.Persistence.Configurations.Common
 {
     public class ModifiableEntityConfiguration<T> : IEntityTypeConfiguration<T>
-        where T : ModifiableEntityBase
+        where T : class, IModifiableEntity
     {
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {

@@ -1,8 +1,9 @@
 ﻿using InstagramClone.Domain.Entities.Identity;
+using InstagramClone.Domain.Interfaces.Base;
 
 namespace InstagramClone.Domain.Entities.Common.Base
 {
-    public abstract class ModifiableEntityBase : EntityBase
+    public abstract class ModifiableEntityBase : EntityBase, IModifiableEntity
     {
         protected ModifiableEntityBase()
         {
@@ -23,6 +24,6 @@ namespace InstagramClone.Domain.Entities.Common.Base
         public Guid? RemovedById { get; private set; } = default!;
         public virtual AppUser? RemovedBy { get; private set; } = default!;
         public DateTime? RemovedDate { get; private set; } = default!;
-        public bool IsRemoved { get; set; } = false;
+        public bool IsRemoved { get; set; }
     }
 }

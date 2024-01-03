@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using InstagramClone.Domain.Entities;
 using InstagramClone.Domain.Entities.Chat;
-using InstagramClone.Domain.Entities.Common.Base;
 using InstagramClone.Domain.Entities.Content;
 using InstagramClone.Domain.Entities.Identity;
+using InstagramClone.Domain.Interfaces.Base;
 using InstagramClone.Persistence.Utils.AspNetCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -64,7 +64,7 @@ namespace InstagramClone.Persistence.Contexts
         {
             // Extended Classes from ModifiableEntityBase
             foreach (var entry in
-                     ChangeTracker.Entries<ModifiableEntityBase>())
+                     ChangeTracker.Entries<IModifiableEntity>())
             {
                 if (entry.State == EntityState.Added)
                 {

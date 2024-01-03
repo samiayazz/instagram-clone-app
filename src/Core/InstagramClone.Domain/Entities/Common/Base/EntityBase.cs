@@ -11,6 +11,6 @@ namespace InstagramClone.Domain.Entities.Common.Base
         protected EntityBase(Guid id)
             => Id = id;
 
-        public Guid Id { get; private init; } = Guid.NewGuid();
+        public Guid Id { get; protected init; } = Guid.NewGuid();
     }
 }

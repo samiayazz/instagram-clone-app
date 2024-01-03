@@ -23,9 +23,9 @@ namespace InstagramClone.Domain.Entities.Identity
         public DateTime BirthDate { get; set; }
         public string? About { get; set; }
 
-        public DateTime CreatedDate { get; private set; }
-        public DateTime? UpdatedDate { get; private set; }
-        public DateTime? RemovedDate { get; private set; }
-        public bool IsRemoved { get; set; } = false;
+        public DateTime CreatedDate { get; private set; } = default!;
+        public DateTime? UpdatedDate { get; private set; } = default!;
+        public DateTime? RemovedDate { get; private set; } = default!;
+        public bool IsRemoved { get; set; }
     }
 }
