@@ -1,10 +1,11 @@
-﻿using InstagramClone.Domain.Entities.Identity;
+﻿using InstagramClone.Application.Contracts.Repository.Common;
 using InstagramClone.Domain.Interfaces.Base;
 using InstagramClone.Persistence.Contexts;
 
 namespace InstagramClone.Persistence.Repositories.Common
 {
-    public abstract class SoftRemovableRepositoryBase<TEntity, TKey> : RepositoryBase<TEntity, TKey>
+    public abstract class SoftRemovableRepositoryBase<TEntity, TKey> : RepositoryBase<TEntity, TKey>,
+        ISoftRemovableRepository<TEntity, TKey>
         where TEntity : class, IModifiableEntity
         where TKey : struct
     {

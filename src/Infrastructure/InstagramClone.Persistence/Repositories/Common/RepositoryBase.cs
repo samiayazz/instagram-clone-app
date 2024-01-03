@@ -1,11 +1,12 @@
 ﻿using System.Linq.Expressions;
+using InstagramClone.Application.Contracts.Repository.Common;
 using InstagramClone.Domain.Interfaces.Base;
 using InstagramClone.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 
 namespace InstagramClone.Persistence.Repositories.Common
 {
-    public abstract class RepositoryBase<TEntity, TKey>
+    public abstract class RepositoryBase<TEntity, TKey> : IRepository<TEntity, TKey>
         where TEntity : class, IEntity
         where TKey : struct
     {
