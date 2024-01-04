@@ -1,4 +1,4 @@
-﻿using InstagramClone.Application.Contracts.Repository.Common;
+﻿using InstagramClone.Application.Interfaces.Repository.Common;
 using InstagramClone.Domain.Interfaces.Base;
 using InstagramClone.Persistence.Contexts;
 

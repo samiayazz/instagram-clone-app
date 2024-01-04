@@ -1,7 +1,7 @@
-﻿using InstagramClone.Application.Contracts.Repository.Common;
+﻿using InstagramClone.Application.Interfaces.Repository.Common;
 using InstagramClone.Domain.Entities.Content;
 
-namespace InstagramClone.Application.Contracts.Repository.Content
+namespace InstagramClone.Application.Interfaces.Repository.Content
 {
     public interface ICommentRepository : ISoftRemovableRepository<Comment, Guid>;
 }

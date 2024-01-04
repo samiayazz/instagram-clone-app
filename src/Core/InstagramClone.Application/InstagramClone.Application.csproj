@@ -13,7 +13,14 @@
     <ItemGroup>
       <Folder Include="DTOs\Chat\" />
       <Folder Include="DTOs\Content\" />
-      <Folder Include="Features\Commands\" />
+      <Folder Include="Features\Chat\Commands\" />
+      <Folder Include="Features\Chat\Queries\" />
+      <Folder Include="Features\Content\Commands\" />
+      <Folder Include="Features\Content\Queries\" />
+      <Folder Include="Features\Group\Commands\" />
+      <Folder Include="Features\Group\Queries\" />
+      <Folder Include="Features\Thought\Commands\" />
+      <Folder Include="Features\Thought\Queries\" />
     </ItemGroup>
 
     <ItemGroup>

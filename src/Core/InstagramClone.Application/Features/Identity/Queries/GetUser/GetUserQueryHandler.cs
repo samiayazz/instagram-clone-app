@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using InstagramClone.Application.Contracts.Repository.Identity;
 using InstagramClone.Application.DTOs.Identity;
+using InstagramClone.Application.Interfaces.Repository.Identity;
 using MediatR;
 
-namespace InstagramClone.Application.Features.Queries.GetAllUsers
+namespace InstagramClone.Application.Features.Identity.Queries.GetUser
 {
     public class GetUserQueryHandler : IRequestHandler<GetUserQueryRequest, GetUserQueryResponse>
     {
@@ -15,16 +15,10 @@ namespace InstagramClone.Application.Features.Queries.GetAllUsers
 
         public async Task<GetUserQueryResponse> Handle(GetUserQueryRequest request,
             CancellationToken cancellationToken)
-        {
-            var users = await _repository.GetAllAsync();
-            long count = 0;
-            if (users?.Count > 0)
-                count = users.Count;
-
-            return new GetUserQueryResponse(
-                count,
-                _mapper.Map<ICollection<GetUserDto>>(users)
-            );
-        }
+            => new GetUserQueryResponse(_mapper.Map<UserDto>(
+                await _repository.GetByUserNameOrEmailAndPasswordAsync(
+                    request.Dto.UserNameOrEmail, request.Dto.Password
+                )
+            ));
     }
 }

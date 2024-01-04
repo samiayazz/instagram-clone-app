@@ -1,13 +1,14 @@
-﻿using InstagramClone.Domain.Entities.Identity;
+﻿using InstagramClone.Application.Interfaces.DTO.Common;
+using InstagramClone.Domain.Entities.Identity;
 
 namespace InstagramClone.Application.DTOs.Identity
 {
-    public class GetUserDto
+    public class GetUserDto : IDto
     {
-        public GetUserDto(long count, ICollection<AppUser>? users)
-            => (Count, Users) = (count, users);
+        public GetUserDto(string userNameOrEmail, string password)
+            => (UserNameOrEmail, Password) = (userNameOrEmail, password);
 
-        public long Count { get; init; }
-        public ICollection<AppUser>? Users { get; init; }
+        public string UserNameOrEmail { get; set; }
+        public string Password { get; set; }
     }
 }

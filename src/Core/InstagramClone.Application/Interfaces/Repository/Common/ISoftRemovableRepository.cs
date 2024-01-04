@@ -1,6 +1,6 @@
 ﻿using InstagramClone.Domain.Interfaces.Base;
 
-namespace InstagramClone.Application.Contracts.Repository.Common
+namespace InstagramClone.Application.Interfaces.Repository.Common
 {
     public interface ISoftRemovableRepository<TEntity, in TKey> : IRepository<TEntity, TKey>
         where TEntity : class, IModifiableEntity

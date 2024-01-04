@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using InstagramClone.Domain.Interfaces.Base;
 
-namespace InstagramClone.Application.Contracts.Repository.Common
+namespace InstagramClone.Application.Interfaces.Repository.Common
 {
     public interface IRepository<TEntity, in TKey>
         where TEntity : class, IEntity
