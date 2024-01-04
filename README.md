@@ -12,6 +12,8 @@
 
 > [!Note]
 > Geliştirilme aşamasında.
+> 
+> Lütfen öneri ve tavsiyeleriniz için `issue` oluşturmaktan çekinmeyin.
 
 <br>
 
@@ -29,9 +31,9 @@ _Aşağıda uygulamada kullanılan teknolojiler ve mimari yaklaşımlarının ö
   kullanılmıştır.
     - **Write Db: PostgreSQL, Read Db: MongoDB:** Veri depolama için yazma işlemleri PostgreSQL, okuma işlemleri MongoDB
       kullanılmıştır.
+    - **Entity Framework Core:** Write Db işlemleri için Entity Framework Core kullanılmıştır.
     - **ElasticSearch:** Arama işlemleri için ElasticSearch entegre edilmiştir.
     - **Redis:** Veri önbellekleme için Redis kullanılmıştır.
-- **Entity Framework Core:** Write Db işlemleri için Entity Framework Core kullanılmıştır.
 - **Güvenlik**
     - **Identity Framework:** Kimlik doğrulama ve yetkilendirme işlemleri için Identity Framework kullanılmıştır.
     - **JWT Security:** JSON Web Token tabanlı güvenlik sağlanmıştır.
@@ -57,6 +59,8 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 
 > [!Note]
 > Under development.
+>
+> Please feel free to create an `issue` for your suggestions and recommendations.
 
 <br>
 
@@ -74,9 +78,9 @@ _Below is a summary of the technologies and architectural approaches used in the
   is used.
     - **Write Db: PostgreSQL, Read Db: MongoDB:** PostgreSQL for write operations and MongoDB for read operations are
       used for data storage.
+    - **Entity Framework Core:** Used for Write Db operations.
     - **ElasticSearch:** ElasticSearch is integrated for search operations.
     - **Redis:** Redis is used for data caching.
-- **Entity Framework Core:** Used for Write Db operations.
 - **Security**
     - **Identity Framework:** Identity Framework is utilized for authentication and authorization processes.
     - **JWT Security:** Security is provided using JSON Web Tokens.
