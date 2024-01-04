@@ -10,4 +10,16 @@
       <ProjectReference Include="..\InstagramClone.Domain\InstagramClone.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="DTOs\Chat\" />
+      <Folder Include="DTOs\Content\" />
+      <Folder Include="Features\Commands\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="MediatR" Version="12.2.0" />
+    </ItemGroup>
+
 </Project>
