@@ -39,7 +39,7 @@ _Aşağıda uygulamada kullanılan teknolojiler ve mimari yaklaşımlarının ö
 - **Ekstra**
     - **FluentValidation:** Uygulama içinde doğrulama için kullanılmıştır.
     - **AutoMapper:** Nesne dönüşümleri için kullanılmıştır.
-    - **Mediatr:** İstek/cevap mantığını bağımsızlaştırmak için Mediator deseni kullanılmıştır.
+    - **MediatR:** İstek/cevap mantığını bağımsızlaştırmak için Mediator deseni kullanılmıştır.
 
 ### Kurulum
 
@@ -85,7 +85,7 @@ _Below is a summary of the technologies and architectural approaches used in the
 - **Extras**
     - **FluentValidation:** Used for validation within the application.
     - **AutoMapper:** Utilized for object-to-object mapping.
-    - **Mediatr:** Mediator pattern implementation for decoupling request/response logic.
+    - **MediatR:** Mediator pattern implementation for decoupling request/response logic.
 
 ### Installation
 
