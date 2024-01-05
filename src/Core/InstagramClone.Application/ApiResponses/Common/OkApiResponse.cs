@@ -1,4 +1,4 @@
-﻿namespace InstagramClone.API.Models.Responses.Common
+﻿namespace InstagramClone.Application.ApiResponses.Common
 {
     public class OkApiResponse : ApiResponseBase
     {

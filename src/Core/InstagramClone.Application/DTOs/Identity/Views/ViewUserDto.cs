@@ -1,10 +1,10 @@
 ﻿using InstagramClone.Application.Interfaces.DTO.Common;
 
-namespace InstagramClone.Application.DTOs.Identity
+namespace InstagramClone.Application.DTOs.Identity.Views
 {
-    public class UserDto : IDto
+    public class ViewUserDto : IDto
     {
-        public UserDto(Guid id, string userName, string email, string password,
+        public ViewUserDto(Guid id, string userName, string email, string password,
             string firstName, string lastName, bool gender, DateTime birthDate,
             DateTime createdDate, DateTime? updatedDate = null, string? about = null)
             => (Id, UserName, Email, Password, FirstName, LastName, Gender, BirthDate,

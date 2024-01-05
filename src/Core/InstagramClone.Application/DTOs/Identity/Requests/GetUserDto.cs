@@ -1,7 +1,6 @@
 ﻿using InstagramClone.Application.Interfaces.DTO.Common;
-using InstagramClone.Domain.Entities.Identity;
 
-namespace InstagramClone.Application.DTOs.Identity
+namespace InstagramClone.Application.DTOs.Identity.Requests
 {
     public class GetUserDto : IDto
     {

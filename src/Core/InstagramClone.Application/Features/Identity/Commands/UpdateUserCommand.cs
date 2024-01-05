@@ -7,29 +7,29 @@ using MediatR;
 
 namespace InstagramClone.Application.Features.Identity.Commands
 {
-    public class CreateUserCommand : IRequest<OkApiResponse>
+    public class UpdateUserCommand : IRequest<OkApiResponse>
     {
-        public CreateUserCommand(WriteUserDto dto)
-            => (Dto) = (dto);
+        public UpdateUserCommand(Guid id, WriteUserDto dto)
+            => (Id, Dto) = (id, dto);
 
+        private Guid Id { get; set; }
         private WriteUserDto Dto { get; set; }
 
 
-        public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, OkApiResponse>
+        public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, OkApiResponse>
         {
             private readonly IUserRepository _repository;
             private readonly IMapper _mapper;
 
-            public CreateUserCommandHandler(IUserRepository repository, IMapper mapper)
+            public UpdateUserCommandHandler(IUserRepository repository, IMapper mapper)
                 => (_repository, _mapper) = (repository, mapper);
 
-            public async Task<OkApiResponse> Handle(CreateUserCommand request,
-                CancellationToken cancellationToken)
+            public async Task<OkApiResponse> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
             {
                 if (!await _repository.IsEmailUniqueAsync(request.Dto.Email))
                     throw new Exception();
 
-                bool isSuccess = await _repository.CreateAsync(_mapper.Map<AppUser>(request.Dto));
+                bool isSuccess = await _repository.UpdateAsync(_mapper.Map<AppUser>(request.Dto));
                 if (!isSuccess)
                     throw new Exception();
 

@@ -8,5 +8,9 @@ namespace InstagramClone.Application.Interfaces.Repository.Identity
         Task<AppUser?> GetByUserNameOrEmailAndPasswordAsync(string userNameOrEmail, string password);
 
         Task<bool> IsEmailUniqueAsync(string email);
+
+        Task<bool> SoftRemoveAsync(AppUser entity);
+
+        Task<bool> SoftRemoveRangeAsync(ICollection<AppUser> entities);
     }
 }

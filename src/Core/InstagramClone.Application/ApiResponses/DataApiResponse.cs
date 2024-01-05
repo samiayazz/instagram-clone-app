@@ -1,7 +1,7 @@
-﻿using InstagramClone.API.Models.Responses.Common;
+﻿using InstagramClone.Application.ApiResponses.Common;
 using InstagramClone.Application.Interfaces.DTO.Common;
 
-namespace InstagramClone.API.Models.Responses
+namespace InstagramClone.Application.ApiResponses
 {
     public class DataApiResponse<T> : OkApiResponse
         where T : class, IDto
