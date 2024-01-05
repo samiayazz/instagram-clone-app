@@ -11,7 +11,7 @@ namespace InstagramClone.Application.Features.Identity.Queries
         public GetUserByIdQuery(Guid id)
             => (Id) = (id);
 
-        private Guid Id { get; set; }
+        public Guid Id { get; set; }
 
 
         public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, DataApiResponse<ViewUserDto>>

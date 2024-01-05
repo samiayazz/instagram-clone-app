@@ -12,7 +12,7 @@ namespace InstagramClone.Application.Features.Identity.Commands
         public CreateUserCommand(WriteUserDto dto)
             => (Dto) = (dto);
 
-        private WriteUserDto Dto { get; set; }
+        public WriteUserDto Dto { get; set; }
 
 
         public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, OkApiResponse>

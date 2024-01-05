@@ -19,7 +19,6 @@
       <Folder Include="Features\Content\Queries\" />
       <Folder Include="Features\Group\Commands\" />
       <Folder Include="Features\Group\Queries\" />
-      <Folder Include="Features\Thought\Commands\" />
       <Folder Include="Features\Thought\Queries\" />
     </ItemGroup>
 

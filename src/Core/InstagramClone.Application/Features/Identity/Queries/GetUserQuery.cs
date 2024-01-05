@@ -12,7 +12,7 @@ namespace InstagramClone.Application.Features.Identity.Queries
         public GetUserQuery(GetUserDto dto)
             => (Dto) = (dto);
 
-        private GetUserDto Dto { get; set; }
+        public GetUserDto Dto { get; set; }
 
 
         public class GetUserQueryHandler : IRequestHandler<GetUserQuery, DataApiResponse<ViewUserDto>>

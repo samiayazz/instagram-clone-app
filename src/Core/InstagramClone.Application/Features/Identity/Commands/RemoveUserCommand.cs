@@ -12,7 +12,7 @@ namespace InstagramClone.Application.Features.Identity.Commands
         public RemoveUserCommand(Guid id)
             => (Id) = (id);
 
-        private Guid Id { get; set; }
+        public Guid Id { get; set; }
 
 
         public class RemoveUserCommandHandler : IRequestHandler<RemoveUserCommand, OkApiResponse>

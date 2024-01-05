@@ -12,8 +12,8 @@ namespace InstagramClone.Application.Features.Identity.Commands
         public UpdateUserCommand(Guid id, WriteUserDto dto)
             => (Id, Dto) = (id, dto);
 
-        private Guid Id { get; set; }
-        private WriteUserDto Dto { get; set; }
+        public Guid Id { get; set; }
+        public WriteUserDto Dto { get; set; }
 
 
         public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, OkApiResponse>
