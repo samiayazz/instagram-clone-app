@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using InstagramClone.Application.DTOs.Identity;
-using InstagramClone.Application.Features.Identity.Commands.CreateUser;
 using InstagramClone.Domain.Entities.Identity;
 
 namespace InstagramClone.Application.Maps
