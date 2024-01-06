@@ -7,24 +7,24 @@ using MediatR;
 
 namespace InstagramClone.Application.Features.Identity.Commands
 {
-    public class RemoveUserCommand : IRequest<OkApiResponse>
+    public class SoftRemoveUserCommand : IRequest<OkApiResponse>
     {
-        public RemoveUserCommand(Guid id)
+        public SoftRemoveUserCommand(Guid id)
             => (Id) = (id);
 
         public Guid Id { get; set; }
 
 
-        public class RemoveUserCommandHandler : IRequestHandler<RemoveUserCommand, OkApiResponse>
+        public class SoftRemoveUserCommandHandler : IRequestHandler<SoftRemoveUserCommand, OkApiResponse>
         {
             private readonly IUserRepository _repository;
             private readonly IMediator _mediator;
             private readonly IMapper _mapper;
 
-            public RemoveUserCommandHandler(IUserRepository repository, IMediator mediator, IMapper mapper)
+            public SoftRemoveUserCommandHandler(IUserRepository repository, IMediator mediator, IMapper mapper)
                 => (_repository, _mediator, _mapper) = (repository, mediator, mapper);
 
-            public async Task<OkApiResponse> Handle(RemoveUserCommand request, CancellationToken cancellationToken)
+            public async Task<OkApiResponse> Handle(SoftRemoveUserCommand request, CancellationToken cancellationToken)
             {
                 var userByIdResponse = await _mediator.Send(new GetUserByIdQuery(request.Id));
                 var userEntityToRemove = _mapper.Map<AppUser>(userByIdResponse.Data);
