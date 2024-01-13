@@ -1,4 +1,4 @@
-﻿# Instagram Clone Backend
+﻿# Instagram Clone Application
 
 <br>
 
