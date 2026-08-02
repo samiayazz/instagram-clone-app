@@ -45,6 +45,13 @@ _Below is a summary of the technologies and architectural approaches used in the
 
 To run the project, follow these steps:
 
+1. Install and configure PostgreSQL and MongoDB databases.
+2. Set up services such as Redis, ElasticSearch, etc.
+3. Clone the project files.
+4. Configure necessary settings in the `appsettings.json` file.
+5. Open the terminal in the project folder and run `dotnet restore` to install dependencies.
+6. Start the application by using the command `dotnet run`.
+
 <br>
 
 ## Türkçe
@@ -90,10 +97,3 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 4. `appsettings.json` dosyasında gerekli ayarlamaları yapın.
 5. Proje klasöründe terminali açın ve bağımlılıkları yüklemek için `dotnet restore` komutunu çalıştırın.
 6. Uygulamayı başlatmak için `dotnet run` komutunu kullanın.
-
-1. Install and configure PostgreSQL and MongoDB databases.
-2. Set up services such as Redis, ElasticSearch, etc.
-3. Clone the project files.
-4. Configure necessary settings in the `appsettings.json` file.
-5. Open the terminal in the project folder and run `dotnet restore` to install dependencies.
-6. Start the application by using the command `dotnet run`.
