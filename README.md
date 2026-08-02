@@ -2,9 +2,48 @@
 
 <br>
 
-## Dil Seçimi / Language Selection
+## Language Selection — Dil Seçimi 
 
-[Türkçe](#türkçe) / [English](#english)
+[English](#english) — [Türkçe](#türkçe)
+
+<br>
+
+## English
+
+> [!Note]
+> Under development.
+>
+> Please feel free to create an `issue` for your suggestions and recommendations.
+
+<br>
+
+This project is an Instagram clone application developed using .NET Core. <br>
+The application is structured based on various modern technologies and **follows the principles of Clean Architecture and CQRS**. <br>
+
+_Below is a summary of the technologies and architectural approaches used in the application._
+
+### Technologies Used
+
+- **Clean Architecture:** The project is structured according to Clean Architecture principles.
+- **xUnit:** The testing framework used for unit testing.
+- **CQRS (Command Query Responsibility Segregation):** An architecture that separates command and query responsibilities
+  is used.
+    - **Write Db: PostgreSQL, Read Db: MongoDB:** PostgreSQL for write operations and MongoDB for read operations are
+      used for data storage.
+    - **Entity Framework Core:** Used for Write Db operations.
+    - **ElasticSearch:** ElasticSearch is integrated for search operations.
+    - **Redis:** Redis is used for data caching.
+- **Security**
+    - **Identity Framework:** Identity Framework is utilized for authentication and authorization processes.
+    - **JWT Security:** Security is provided using JSON Web Tokens.
+- **Extras**
+    - **FluentValidation:** Used for validation within the application.
+    - **AutoMapper:** Utilized for object-to-object mapping.
+    - **MediatR:** Mediator pattern implementation for decoupling request/response logic.
+
+### Installation
+
+To run the project, follow these steps:
 
 <br>
 
@@ -51,45 +90,6 @@ Projeyi çalıştırmak için aşağıdaki adımları izleyin:
 4. `appsettings.json` dosyasında gerekli ayarlamaları yapın.
 5. Proje klasöründe terminali açın ve bağımlılıkları yüklemek için `dotnet restore` komutunu çalıştırın.
 6. Uygulamayı başlatmak için `dotnet run` komutunu kullanın.
-
-<br>
-
-## English
-
-> [!Note]
-> Under development.
->
-> Please feel free to create an `issue` for your suggestions and recommendations.
-
-<br>
-
-This project is an Instagram clone application developed using .NET Core. <br>
-The application is structured based on various modern technologies and **follows the principles of Clean Architecture and CQRS**. <br>
-
-_Below is a summary of the technologies and architectural approaches used in the application._
-
-### Technologies Used
-
-- **Clean Architecture:** The project is structured according to Clean Architecture principles.
-- **xUnit:** The testing framework used for unit testing.
-- **CQRS (Command Query Responsibility Segregation):** An architecture that separates command and query responsibilities
-  is used.
-    - **Write Db: PostgreSQL, Read Db: MongoDB:** PostgreSQL for write operations and MongoDB for read operations are
-      used for data storage.
-    - **Entity Framework Core:** Used for Write Db operations.
-    - **ElasticSearch:** ElasticSearch is integrated for search operations.
-    - **Redis:** Redis is used for data caching.
-- **Security**
-    - **Identity Framework:** Identity Framework is utilized for authentication and authorization processes.
-    - **JWT Security:** Security is provided using JSON Web Tokens.
-- **Extras**
-    - **FluentValidation:** Used for validation within the application.
-    - **AutoMapper:** Utilized for object-to-object mapping.
-    - **MediatR:** Mediator pattern implementation for decoupling request/response logic.
-
-### Installation
-
-To run the project, follow these steps:
 
 1. Install and configure PostgreSQL and MongoDB databases.
 2. Set up services such as Redis, ElasticSearch, etc.
