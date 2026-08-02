@@ -2,7 +2,7 @@
 
 <br>
 
-## Language Selection — Dil Seçimi 
+## Language Selection — Dil Seçimi
 
 [English](#english) — [Türkçe](#türkçe)
 
